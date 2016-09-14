@@ -1,4 +1,5 @@
 var plusTen = 70;
+var counter = 0;
 
 function setup() {
   createCanvas(500,500,20,20);
@@ -10,6 +11,18 @@ function draw() {
   //Chimney
   fill(128);
   rect(110, 29 + plusTen, 40, 40);
+   if(counter == 1){
+    ellipse(128, 80, 30, 30);
+  }else if(counter == 2){
+    ellipse(128, 60, 25, 25); 
+  }else if(counter == 3){
+    ellipse(128, 40, 15, 15); 
+  }else if(counter == 4){
+    ellipse(128, 20, 10, 10); 
+  }else{
+    fill(255)
+    counter = 0;
+  }
   
   //Roof
   fill('#ff0000');
@@ -37,4 +50,8 @@ function draw() {
   
   
   // 75, 155, 135, 240, 20, 240
+}
+
+function mousePressed(){
+  counter = counter +1;
 }
